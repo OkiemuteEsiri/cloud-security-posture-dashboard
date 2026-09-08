@@ -1,0 +1,6 @@
+finding_id,provider,control_area,severity,status,asset_type,owner,age_days
+CSP-001,AWS,identity,high,open,iam-role,platform,32
+CSP-002,Azure,logging,medium,open,subscription,security,18
+CSP-003,GCP,public-exposure,critical,open,storage-bucket,data,7
+CSP-004,AWS,encryption,medium,remediated,database,application,45
+CSP-005,Azure,secrets,high,open,key-vault,platform,12
