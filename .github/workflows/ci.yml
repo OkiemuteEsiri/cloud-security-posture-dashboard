@@ -1,0 +1,24 @@
+name: security-engineering-ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile source
+        run: python -m compileall -q src tests
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate synthetic assessment
+        run: python -m src.cli data/synthetic_findings.json --remediation data/remediation_evidence.json --output /tmp/posture-report.md

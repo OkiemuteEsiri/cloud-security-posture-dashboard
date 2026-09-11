@@ -1,0 +1,26 @@
+[
+  {
+    "finding_id": "CSP-004",
+    "owner": "application-platform",
+    "change_reference": "CHG-SYN-1042",
+    "post_change_state": "workload identity fixture replaces static secret fixture",
+    "validation_method": "offline policy fixture re-evaluation",
+    "validation_result": "effective"
+  },
+  {
+    "finding_id": "CSP-003",
+    "owner": "cloud-security",
+    "change_reference": "CHG-SYN-1088",
+    "post_change_state": "log-sink fixture updated",
+    "validation_method": "synthetic telemetry coverage check",
+    "validation_result": "pending"
+  },
+  {
+    "finding_id": "CSP-001",
+    "owner": "data-platform",
+    "change_reference": "",
+    "post_change_state": "",
+    "validation_method": "configuration re-evaluation",
+    "validation_result": "pending"
+  }
+]
